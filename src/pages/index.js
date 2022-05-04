@@ -19,12 +19,13 @@ export default function Home() {
           </p>
         </div>
         <div className="illustration">
-          <Image
+          {/* <Image
             src={UserInterfaceIllustration}
             alt="User Interface Illustration"
             width={500}
             height={500}
-          />
+          /> */}
+          <UserInterfaceIllustration />
           {/* <img
           src={userInterfaceIllustration}
           alt="user interface illustration"
