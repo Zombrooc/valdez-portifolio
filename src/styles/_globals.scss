@@ -1,0 +1,326 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
+}
+body {
+  line-height: 1;
+}
+ol,
+ul {
+  list-style: none;
+}
+blockquote,
+q {
+  quotes: none;
+}
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: "";
+  content: none;
+}
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+:root {
+  --color-success: #32d15d;
+  --color-attention: #e8dc2e;
+  --color-danger: #eb4034;
+  --color-dark: #2e2e2e;
+  --color-info: #24b0e3;
+  --color-light: #f5f5f5;
+  --color-grey: #787878;
+
+  /* Darker Color Pallet */
+  --color-dark-dark: #1c1c1c;
+  --color-dark-success: #2ecc71;
+  --color-dark-attention: #f1c40f;
+  --color-dark-danger: #e74c3c;
+  --color-dark-info: #3498db;
+  --color-dark-light: #f5f5f5;
+  --color-dark-grey: #8c8c8c;
+}
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  outline: 0;
+}
+
+html,
+body,
+#__next {
+  font-family: "Nunito", sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+}
+
+h1 {
+  font-size: 3.5rem;
+  font-weight: 700;
+  color: #fff;
+  text-align: left;
+  background: linear-gradient(
+    90deg,
+    rgba(130, 0, 255, 1) 0%,
+    rgba(0, 255, 232, 1) 100%
+  );
+  background-clip: text;
+  --webkit-background-clip: text;
+  color: transparent;
+
+  @media screen and (max-width: 768px) {
+    font-size: 2.5rem;
+  }
+}
+
+.container {
+  width: 100%;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  padding: 2rem 4rem;
+
+  div {
+    &.title {
+      width: 65%;
+
+      p {
+        font-size: 1.2rem;
+        color: var(--color-dark);
+        margin-top: 30px;
+      }
+    }
+
+    &.illustration {
+      width: 35%;
+    }
+  }
+
+  @media screen and (max-width: 768px) {
+    flex-direction: column;
+    padding: 2rem;
+
+    div {
+      h1 {
+        width: 100%;
+      }
+
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+      width: 100% !important;
+
+      &.illustration {
+        margin-top: 100px;
+      }
+    }
+  }
+}
+
+.aurora {
+  width: 100vw;
+  // height: 100vh;
+  height: 100%;
+  background: #fff;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  overflow: hidden;
+  z-index: -1;
+
+  .base {
+    position: absolute;
+    filter: blur(60px);
+    opacity: 0.8;
+
+    &.first {
+      border-radius: 100%;
+      width: 600px;
+      height: 600px;
+      background-color: var(--color-info);
+      left: -50px;
+      top: -300px;
+      z-index: 3;
+      animation: fly 12s linear infinite;
+      transform: rotate(0) translate(80px) rotate(0);
+    }
+
+    &.second {
+      width: 500px;
+      height: 800px;
+      background-color: var(--color-success);
+      bottom: -30px;
+      left: -80px;
+    }
+
+    &.third {
+      border-radius: 100%;
+      width: 450px;
+      height: 450px;
+      bottom: -80px;
+      right: -100px;
+      background-color: var(--color-danger);
+      animation: flyPlus 8s linear infinite;
+      transform: rotate(0) translate(100px) rotate(0);
+    }
+  }
+}
+
+@keyframes fly {
+  100% {
+    transform: rotate(1turn) translate(100px) rotate(-1turn);
+  }
+}
+
+@keyframes flyPlus {
+  100% {
+    transform: rotate(-1turn) translate(100px) rotate(1turn);
+  }
+}
+
+a {
+  color: RoyalBlue;
+  font-weight: normal;
+  text-decoration: none;
+}
+a:hover {
+  color: CornflowerBlue;
+}
+
+/* Circle Avatar Styles */
+
+.circle {
+  line-height: 0; /* remove line-height */
+  display: inline-block; /* circle wraps image */
+  margin: 5px;
+  border: 4px solid rgba(200, 200, 200, 0.4);
+  border-radius: 50%; /* relative value */
+  /*box-shadow: 0px 0px 5px rgba(0,0,0,0.4);*/
+  transition: linear 0.25s;
+  height: 128px;
+  width: 128px;
+}
+.circle img {
+  border-radius: 50%; /* relative value for
+				   adjustable image size */
+}
+.circle:hover {
+  transition: ease-out 0.2s;
+  border: 4px solid rgba(0, 0, 0, 0.2);
+  -webkit-transition: ease-out 0.2s;
+}
+a.circle {
+  color: transparent;
+} /* IE fix: removes blue border */
