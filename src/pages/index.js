@@ -1,6 +1,6 @@
 import Image from "next/image";
 
-import UserInterfaceIllustration from "../assets/undraw_Mobile_interface_re_1vv9.svg";
+import UserInterfaceIllustration from "../assets/undraw_mobile_interface_re_1vv9.svg";
 import elianValdez from "../assets/IMG-20210802-WA0041.jpg";
 
 export default function Home() {
