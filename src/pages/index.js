@@ -1,7 +1,5 @@
 import Image from "next/image";
 
-import Aurora from "../components/AuroraEffect/index";
-
 import UserInterfaceIllustration from "../assets/undraw_Mobile_interface_re_1vv9.svg";
 import elianValdez from "../assets/IMG-20210802-WA0041.jpg";
 
@@ -43,7 +41,7 @@ export default function Home() {
           flexDirection: "column",
         }}
       >
-        <Aurora />
+        <h1 style={{ textAlign: "center" }}> Sobre mim </h1>
         <a href="https://github.com/Zombrooc" className="circle">
           <Image
             height="128"
@@ -52,7 +50,14 @@ export default function Home() {
             alt="Elian's Profile Pic"
           />
         </a>
-        <p style={{ marginTop: "25px", lineHeight: "1.5", fontSize: "18px" }}>
+        <p
+          style={{
+            marginTop: "25px",
+            lineHeight: "1.8",
+            fontSize: "18px",
+            padding: "2rem 8rem",
+          }}
+        >
           Meu nome é Elian Valdez, me formei em Técnico em Informática pela E.
           E. Godofredo Rangel na cidade de Três Corações em dezembro de 2018 e
           sendo posteriormente indicado como instrutor de informática na
@@ -69,6 +74,15 @@ export default function Home() {
           cargo de instrutor de informática na Astrobyte - Centro de Treinamento
           como citado acima.
         </p>
+      </div>
+      <div
+        className="container"
+        style={{ flexDirection: "column", padding: "2rem 8rem" }}
+      >
+        <h1 style={{ textAlign: "center" }}> Alguns projetos </h1>
+        <hr />
+        <br />
+        <span style={{ alignSelf: "start", fontSize: "1.8rem" }}> Web </span>
       </div>
     </>
   );
