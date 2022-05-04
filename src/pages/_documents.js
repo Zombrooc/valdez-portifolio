@@ -31,14 +31,7 @@ export default class MyDocument extends Document {
   render() {
     return (
       <Html>
-        <Head>
-          <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin />
-
-          <link
-            href="//fonts.googleapis.com/css?family=Nunito"
-            rel="stylesheet"
-          />
-        </Head>
+        <Head></Head>
         <body>
           <Main />
           <NextScript />
